@@ -9,7 +9,7 @@ const apiUrl = 'http://localhost:8000/books/search?input='
 
 function App() {
     const [booksInput, setBooksInput] = useState<string>(null);
-    const [booksData, setBooksData] = useState<Book[]>(null);
+    const [booksData, setBooksData] = useState<Book[]>([]);
 
     const fetchBooksByInput = useCallback(async (searchInput: string) => {
         try {
